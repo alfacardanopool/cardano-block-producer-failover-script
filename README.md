@@ -5,4 +5,7 @@ Simple script to be run on Relay nodes every minute, it needs Andrew Westberg's 
 
 It sends telegram notifications to SPO if there is a problem and the failover become enabled or disabled.
 
+IMPORTANT REMINDER:
+NEVER HAVE MORE THAN ONE BLOCK PRODUCER WORKING (VALIDATING TXs WITH INCOMING CONNECTIONS) AT THE SAME TIME.
+
 
