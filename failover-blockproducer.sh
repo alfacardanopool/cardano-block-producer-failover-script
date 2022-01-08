@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Once set and tested create cron
+# * * * * * /root/scripts/failover-blockproducer.sh
 # Are we blocking traffic to FAILOVER Block Producer? In other words, we ARE NOT in failover mode
 isblocking=`/usr/sbin/iptables --list OUTPUT --numeric | grep REJECT | grep 6001 | wc -l`
 error=`/usr/local/bin/cncli ping --host <<MAIN-BLOCK-PRODUCER-IP>> --port <<MAIN-BLOCK-PRODUCER-PORT>> | jq .status | grep error | wc -l`
